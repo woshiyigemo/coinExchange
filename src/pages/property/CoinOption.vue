@@ -92,8 +92,8 @@
 										<span style="padding-right:15px;line-height:35px;">  
 											{{withdrawInfo.currency.toUpperCase()}}
 										</span>
-										</span>
 									</span>
+								
 								</div>
 								</div>
 								
