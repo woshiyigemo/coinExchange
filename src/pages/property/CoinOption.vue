@@ -4,15 +4,15 @@
 			<div class="sjx_section">
 				<div class="section_title">
 					<div class="top-title">
-						总资产合计：{{balance}}
-						&nbsp;&nbsp;USDT<span style="font-size:14px;color:#344252;"> ≈ {{(balance * 6.3).toFixed(2)}} CNY</span>
+						<!--总资产合计：{{balance}}-->
+						<!--&nbsp;&nbsp;USDT<span style="font-size:14px;color:#344252;"> ≈ {{(balance * 6.3).toFixed(2)}} CNY</span>-->
 						<div class="quikc-nav">
 							<router-link class="quikc-link" to='/property/financialrecords' style="margin-right:26px;">财务记录</router-link>
 							<router-link class="quikc-link" to='/property/withdrawaddressmanagement'>提币地址管理</router-link>
 						</div>
 					</div>
 				</div>
-				
+
 				<el-table class="exchange-table coinlist" :data="assetsList" style="width: 100%">
 					<el-table-column prop="currency" label="币种">
 						<template slot-scope="scope">
@@ -25,7 +25,7 @@
 					</el-table-column>
 					<el-table-column prop="options" label="操作" style='position: relative;'>
 						<template slot-scope="scope">
-							<el-popover popper-class="xm-popover" 
+							<el-popover popper-class="xm-popover"
 							offset=0
 							placement="bottom-end"
 							ref="popover" width="800" trigger="click">
@@ -66,37 +66,37 @@
 									<span>可提:{{withdrawInfo.avaliable}}</span>
 									<span>限额:{{withdrawInfo.realAmount}}</span>
 								</p>
-								<span class="combo">  
-								<input class="combo combo-text" type="number" v-model.number="withdrawInfo.amount" @keyup="calFee">  
+								<span class="combo">
+								<input class="combo combo-text" type="number" v-model.number="withdrawInfo.amount" @keyup="calFee">
 								<span style="margin-right: 10px;">{{withdrawInfo.currency.toUpperCase()}}</span>
 								</span>
 								<div style="overflow:hidden;">
 								<div id="xm_num">
 								<p style="margin-left: 15px;font-size:12px;color: #9ea2f9;">手续费</p>
-								<span class="combo">  
+								<span class="combo">
 								<!-- <input class="combo combo-text1" v-model="fee"/>  -->
 								<span class="combo combo-text1">{{withdrawInfo.fee}}</span>
-								<span  style="padding-right:15px;line-height:35px;">  
+								<span  style="padding-right:15px;line-height:35px;">
 									{{withdrawInfo.currency.toUpperCase()}}
 								</span>
-	
+
 								</span>
 								</div>
 								<div id="xm_num">
 									<p style="margin-left: 15px;font-size:12px;color: #9ea2f9;">到账数量</p>
-									<span class="combo" >  
+									<span class="combo" >
 										<!-- <input class="combo combo-text2" v-model="readAmount" /> -->
 										<span class="combo combo-text2">
 											{{withdrawInfo.realAmount}}
 										</span>
-										<span style="padding-right:15px;line-height:35px;">  
+										<span style="padding-right:15px;line-height:35px;">
 											{{withdrawInfo.currency.toUpperCase()}}
 										</span>
 									</span>
-								
+
 								</div>
 								</div>
-								
+
 								<p class="popover-hint">温馨提示</p>
 								<ul>
 									<li>最小提币数为：200 USDT。</li>
@@ -183,7 +183,7 @@
 			this.getAssetsList()
 		},
 		mounted() {
-			
+
 		},
 		methods: {
 			onCopy: function (e) {
@@ -337,12 +337,12 @@
 		position: relative;
 		text-align: left;
 	}
-	
+
 	// .coinlist {
 	// 	text-align: center;
 	// }
-	
-	
+
+
 	.combo {
 		background-color: #5056E0;
 		border: 0px solid;
@@ -353,7 +353,7 @@
 		vertical-align: top;
 		// line-height: 30px;
 	}
-	
+
 	.combo .combo-text {
 		font-size: 18px;
 		color: #FFFFFF;
@@ -367,7 +367,7 @@
 		height: 35px;
 		width: 675px;
 	}
-	
+
 	.combo .combo-text1 {
 		font-size: 18px;
 		color: #FFFFFF;
@@ -390,8 +390,8 @@
 		width: 300px;
 		outline: none;
 	}
-	
-	
+
+
 	.sjx_main{width: 987px;background: #191f27;overflow:hidden;}
 	.sjx_section{width: 890px;margin: 0 auto;}
 	.section_title{border-bottom: 1px solid #232935;color: #525d6f;font-size: 12px;padding-top:20px;}
@@ -406,7 +406,7 @@
 			color: #718198;
 		}
 	}
-	
+
 
 	/* 充币内容 */
 	.charge_title{width:915px;height: 53px;border-bottom: 1px solid #232935;}
